@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ProfileViewController.swift
 //  FinalSurfEducation
 //
 //  Created by Alexey Yarov on 10.08.2022.
@@ -7,13 +7,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
+        view.backgroundColor = .systemPurple
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
     }
 
-
 }
-
