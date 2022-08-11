@@ -39,11 +39,12 @@ final class MainViewController: UIViewController {
 private extension MainViewController {
     
     func configureApperance() {
+        navigationItem.title = "Главная"
         collectionView.register(UINib(nibName: "\(MainItemCollectionViewCell.self)", bundle: .main),
                                 forCellWithReuseIdentifier: "\(MainItemCollectionViewCell.self)")
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.contentInset = .init(top: 10, left: 10, bottom: 10, right: 16) // making collection prettier
+        collectionView.contentInset = .init(top: 10, left: 16, bottom: 10, right: 16) // making collection prettier
     }
     
     func configureModel() {
@@ -70,24 +71,29 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
             cell.title = item.title
             cell.isFavorite = item.isFavorite
             cell.image = item.image
+            cell.didFavoritesTapped = { [weak self] in self?.model.items [indexPath.row].isFavorite.toggle()
+            }
         }
 
         return cell
         
     }
     // MARK: - Here we define heights
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let itemWith = (view.frame.width - Constants.horisontalInset * 2 - Constants.spaceBetweenElements / 2 )
-        return CGSize(width: itemWith, height: 1.45 * itemWith)
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let itemWidth = (view.frame.width - Constants.horisontalInset * 2 - Constants.spaceBetweenRows) / 2
+        return CGSize(width: itemWidth, height: 1.46 * itemWidth)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) ->CGFloat {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return Constants.spaceBetweenRows
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return Constants.spaceBetweenElements
     }
+    
+    
     
 }
 

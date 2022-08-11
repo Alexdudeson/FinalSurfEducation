@@ -23,6 +23,16 @@ class MainItemCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var favoriteButton: UIButton!
     
+    // MARK: -Events
+    
+    var didFavoritesTapped:(()->Void)?
+    
+    // MARK: -Calculated
+    
+    var buttonImage: UIImage? {
+        return isFavorite ? Constants.fillHeartImage : Constants.heartImage
+    }
+    
     // MARK: -Properties
     
     var title: String = "" {
@@ -37,20 +47,23 @@ class MainItemCollectionViewCell: UICollectionViewCell {
     }
     var isFavorite: Bool = false {
         didSet {
-            let image = isFavorite ? Constants.fillHeartImage : Constants.heartImage
-            favoriteButton.setImage(image, for: .normal)
+            favoriteButton.setImage(buttonImage, for: .normal)
         }
     }
     
     // MARK: -Actions
     
     @IBAction private func favoriteAction(_ sender: UIButton) {
+        didFavoritesTapped?()
+        isFavorite.toggle()
     }
     
     
     // MARK: -UICollectionViewCell
     
+    
     override func awakeFromNib() {
+        configureAppearance()
         super.awakeFromNib()
         // Initialization code
     }
@@ -60,17 +73,15 @@ class MainItemCollectionViewCell: UICollectionViewCell {
 // MARK: -Private Methods
 
 private extension MainItemCollectionViewCell {
-    
-    func configureApperance() {
-        
+
+    func configureAppearance() {
         titleLabel.textColor = .black
         titleLabel.font = .systemFont(ofSize: 12)
-        
-        imageView.layer.cornerRadius = 14
-        
-        favoriteButton.tintColor = .white
-        
-    }
-    
-}
 
+        imageView.layer.cornerRadius = 12
+
+        favoriteButton.tintColor = .white
+        isFavorite = false
+    }
+
+}
