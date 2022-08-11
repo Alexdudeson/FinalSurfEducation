@@ -19,6 +19,9 @@
 		E5CA782728A4699B00A88AE4 /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5CA782528A4699B00A88AE4 /* FavoriteViewController.xib */; };
 		E5CA782E28A46B1300A88AE4 /* TabBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CA782D28A46B1300A88AE4 /* TabBarModel.swift */; };
 		E5CA783128A46DF500A88AE4 /* TabBarConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CA783028A46DF500A88AE4 /* TabBarConfigurator.swift */; };
+		E5CA783628A5395400A88AE4 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CA783528A5395400A88AE4 /* MainModel.swift */; };
+		E5CA783B28A540E300A88AE4 /* MainItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CA783928A540E300A88AE4 /* MainItemCollectionViewCell.swift */; };
+		E5CA783C28A540E300A88AE4 /* MainItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5CA783A28A540E300A88AE4 /* MainItemCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		E5CA782528A4699B00A88AE4 /* FavoriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
 		E5CA782D28A46B1300A88AE4 /* TabBarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarModel.swift; sourceTree = "<group>"; };
 		E5CA783028A46DF500A88AE4 /* TabBarConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarConfigurator.swift; sourceTree = "<group>"; };
+		E5CA783528A5395400A88AE4 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
+		E5CA783928A540E300A88AE4 /* MainItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		E5CA783A28A540E300A88AE4 /* MainItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainItemCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +96,10 @@
 		E5CA781F28A468DA00A88AE4 /* MainModule */ = {
 			isa = PBXGroup;
 			children = (
+				E5CA783828A5409800A88AE4 /* Cells */,
 				E5CA781428A40CB400A88AE4 /* MainViewController.swift */,
 				E5CA781528A40CB400A88AE4 /* MainViewController.xib */,
+				E5CA783528A5395400A88AE4 /* MainModel.swift */,
 			);
 			path = MainModule;
 			sourceTree = "<group>";
@@ -131,6 +139,15 @@
 				E5CA783028A46DF500A88AE4 /* TabBarConfigurator.swift */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		E5CA783828A5409800A88AE4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E5CA783928A540E300A88AE4 /* MainItemCollectionViewCell.swift */,
+				E5CA783A28A540E300A88AE4 /* MainItemCollectionViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +209,7 @@
 			files = (
 				E5CA780A28A3FA2B00A88AE4 /* LaunchScreen.storyboard in Resources */,
 				E5CA780728A3FA2B00A88AE4 /* Assets.xcassets in Resources */,
+				E5CA783C28A540E300A88AE4 /* MainItemCollectionViewCell.xib in Resources */,
 				E5CA782728A4699B00A88AE4 /* FavoriteViewController.xib in Resources */,
 				E5CA781C28A4113A00A88AE4 /* ProfileViewController.xib in Resources */,
 				E5CA781728A40CB400A88AE4 /* MainViewController.xib in Resources */,
@@ -205,12 +223,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5CA783628A5395400A88AE4 /* MainModel.swift in Sources */,
 				E5CA780528A3FA2900A88AE4 /* FinalSurfEducation.xcdatamodeld in Sources */,
 				E5CA781B28A4113A00A88AE4 /* ProfileViewController.swift in Sources */,
 				E5CA77FB28A3FA2900A88AE4 /* AppDelegate.swift in Sources */,
 				E5CA782E28A46B1300A88AE4 /* TabBarModel.swift in Sources */,
 				E5CA783128A46DF500A88AE4 /* TabBarConfigurator.swift in Sources */,
 				E5CA782628A4699B00A88AE4 /* FavoriteViewController.swift in Sources */,
+				E5CA783B28A540E300A88AE4 /* MainItemCollectionViewCell.swift in Sources */,
 				E5CA781628A40CB400A88AE4 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
