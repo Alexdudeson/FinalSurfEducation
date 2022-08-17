@@ -17,7 +17,7 @@ class DetailImageTableViewCell: UITableViewCell {
     
     // MARK: -Properties
     
-    var image: UIImage? {
+    override var image: UIImage? {
         didSet {
             cartImageView.image = image
         }

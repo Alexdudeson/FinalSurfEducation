@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E50AECD028AD1C2A007B0D35 /* NetworkTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50AECCF28AD1C2A007B0D35 /* NetworkTask.swift */; };
+		E50AECD328AD1C99007B0D35 /* NetworkMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50AECD228AD1C99007B0D35 /* NetworkMethod.swift */; };
+		E50AECD628AD446E007B0D35 /* BaseNetworkTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50AECD528AD446E007B0D35 /* BaseNetworkTask.swift */; };
+		E50AECD928AD46EC007B0D35 /* HTTPNetworkMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50AECD828AD46EC007B0D35 /* HTTPNetworkMethod.swift */; };
 		E5391E6128AA7CBE00D9DB46 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5391E5F28AA7CBE00D9DB46 /* DetailViewController.swift */; };
 		E5391E6228AA7CBE00D9DB46 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5391E6028AA7CBE00D9DB46 /* DetailViewController.xib */; };
 		E5391E6928AAE17300D9DB46 /* DetailImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5391E6728AAE17300D9DB46 /* DetailImageTableViewCell.swift */; };
@@ -34,6 +38,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E50AECCF28AD1C2A007B0D35 /* NetworkTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTask.swift; sourceTree = "<group>"; };
+		E50AECD228AD1C99007B0D35 /* NetworkMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMethod.swift; sourceTree = "<group>"; };
+		E50AECD528AD446E007B0D35 /* BaseNetworkTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworkTask.swift; sourceTree = "<group>"; };
+		E50AECD828AD46EC007B0D35 /* HTTPNetworkMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPNetworkMethod.swift; sourceTree = "<group>"; };
 		E5391E5F28AA7CBE00D9DB46 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E5391E6028AA7CBE00D9DB46 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		E5391E6728AAE17300D9DB46 /* DetailImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailImageTableViewCell.swift; sourceTree = "<group>"; };
@@ -73,6 +81,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E50AECCC28AD1BE4007B0D35 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E50AECCD28AD1BFB007B0D35 /* Networking */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E50AECCD28AD1BFB007B0D35 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				E50AECCE28AD1C09007B0D35 /* Core */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		E50AECCE28AD1C09007B0D35 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E50AECCF28AD1C2A007B0D35 /* NetworkTask.swift */,
+				E50AECD228AD1C99007B0D35 /* NetworkMethod.swift */,
+				E50AECD528AD446E007B0D35 /* BaseNetworkTask.swift */,
+				E50AECD828AD46EC007B0D35 /* HTTPNetworkMethod.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		E5391E5E28AA7C2700D9DB46 /* DetaitModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +174,7 @@
 		E5CA77F928A3FA2900A88AE4 /* FinalSurfEducation */ = {
 			isa = PBXGroup;
 			children = (
+				E50AECCC28AD1BE4007B0D35 /* Services */,
 				E5CA77FA28A3FA2900A88AE4 /* AppDelegate.swift */,
 				E5CA782B28A46A3F00A88AE4 /* Application */,
 				E5CA780328A3FA2900A88AE4 /* FinalSurfEducation.xcdatamodeld */,
@@ -295,19 +331,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5391E6928AAE17300D9DB46 /* DetailImageTableViewCell.swift in Sources */,
+				E50AECD028AD1C2A007B0D35 /* NetworkTask.swift in Sources */,
 				E5391E6F28AAECEA00D9DB46 /* DetailTitleTableViewCell.swift in Sources */,
 				E5CA783628A5395400A88AE4 /* MainModel.swift in Sources */,
 				E5CA780528A3FA2900A88AE4 /* FinalSurfEducation.xcdatamodeld in Sources */,
+				E50AECD628AD446E007B0D35 /* BaseNetworkTask.swift in Sources */,
 				E5CA781B28A4113A00A88AE4 /* ProfileViewController.swift in Sources */,
 				E53D1F7128AB047E0047E26F /* DetailItemModel.swift in Sources */,
 				E5391E7428AAFABE00D9DB46 /* DetailTextTableViewCell.swift in Sources */,
 				E5CA77FB28A3FA2900A88AE4 /* AppDelegate.swift in Sources */,
+				E50AECD328AD1C99007B0D35 /* NetworkMethod.swift in Sources */,
 				E5CA782E28A46B1300A88AE4 /* TabBarModel.swift in Sources */,
 				E5CA783128A46DF500A88AE4 /* TabBarConfigurator.swift in Sources */,
 				E5CA782628A4699B00A88AE4 /* FavoriteViewController.swift in Sources */,
 				E5391E6128AA7CBE00D9DB46 /* DetailViewController.swift in Sources */,
 				E5CA783B28A540E300A88AE4 /* MainItemCollectionViewCell.swift in Sources */,
 				E5CA781628A40CB400A88AE4 /* MainViewController.swift in Sources */,
+				E50AECD928AD46EC007B0D35 /* HTTPNetworkMethod.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
