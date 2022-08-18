@@ -18,7 +18,10 @@ protocol NetworkTask {
     var completedURL: URL? { get }
     var method: NetworkMethod { get }
     
-    func performRequest( input: Input, _ onResponseWasReceived:(_ result: Result<Output,Error>) -> Void)
+    func performRequest(
+        input: Input,
+        _ onResponseWasReceived: @escaping (_ result: Result<Output,Error>) -> Void
+    )
     
 
 }

@@ -7,9 +7,17 @@
 
 import Foundation
 
-protocol NetworkMethod {
-    var method: String {get}
+
+enum NetworkMethod: String {
+    case get
+    case post
+    
 }
 
-
+extension NetworkMethod {
+    
+    var method: String {
+        rawValue.uppercased()
+    }
+}
 

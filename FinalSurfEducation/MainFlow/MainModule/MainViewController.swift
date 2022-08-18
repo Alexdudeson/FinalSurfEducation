@@ -31,6 +31,16 @@ final class MainViewController: UIViewController {
         configureApperance()
         configureModel()
         model.getPosts()
+        
+        let credentials = AuthRequestModel(phone: "+79876543219", password: "qwerty")
+        AuthService().performLoginRequest(credentials: credentials) {
+            result in switch result {
+            case .success(let response):
+                print(response)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 
 }

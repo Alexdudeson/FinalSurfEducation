@@ -8,9 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E50AECD028AD1C2A007B0D35 /* NetworkTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50AECCF28AD1C2A007B0D35 /* NetworkTask.swift */; };
-		E50AECD328AD1C99007B0D35 /* NetworkMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50AECD228AD1C99007B0D35 /* NetworkMethod.swift */; };
 		E50AECD628AD446E007B0D35 /* BaseNetworkTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50AECD528AD446E007B0D35 /* BaseNetworkTask.swift */; };
-		E50AECD928AD46EC007B0D35 /* HTTPNetworkMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50AECD828AD46EC007B0D35 /* HTTPNetworkMethod.swift */; };
+		E50AECD928AD46EC007B0D35 /* NetworkMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50AECD828AD46EC007B0D35 /* NetworkMethod.swift */; };
 		E5391E6128AA7CBE00D9DB46 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5391E5F28AA7CBE00D9DB46 /* DetailViewController.swift */; };
 		E5391E6228AA7CBE00D9DB46 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5391E6028AA7CBE00D9DB46 /* DetailViewController.xib */; };
 		E5391E6928AAE17300D9DB46 /* DetailImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5391E6728AAE17300D9DB46 /* DetailImageTableViewCell.swift */; };
@@ -20,6 +19,12 @@
 		E5391E7428AAFABE00D9DB46 /* DetailTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5391E7228AAFABE00D9DB46 /* DetailTextTableViewCell.swift */; };
 		E5391E7528AAFABE00D9DB46 /* DetailTextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5391E7328AAFABE00D9DB46 /* DetailTextTableViewCell.xib */; };
 		E53D1F7128AB047E0047E26F /* DetailItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53D1F7028AB047E0047E26F /* DetailItemModel.swift */; };
+		E5AB1B1428AED74D00E43A95 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AB1B1328AED74D00E43A95 /* AuthService.swift */; };
+		E5AB1B1628AED7AD00E43A95 /* AuthRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AB1B1528AED7AD00E43A95 /* AuthRequestModel.swift */; };
+		E5AB1B1828AED8F500E43A95 /* AuthResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AB1B1728AED8F500E43A95 /* AuthResponseModel.swift */; };
+		E5AB1B1B28AEDF3400E43A95 /* PictureResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AB1B1A28AEDF3400E43A95 /* PictureResponseModel.swift */; };
+		E5AB1B1D28AEDF5600E43A95 /* EmptyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AB1B1C28AEDF5600E43A95 /* EmptyModel.swift */; };
+		E5AB1B1F28AEE1D600E43A95 /* PicturesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AB1B1E28AEE1D600E43A95 /* PicturesService.swift */; };
 		E5CA77FB28A3FA2900A88AE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CA77FA28A3FA2900A88AE4 /* AppDelegate.swift */; };
 		E5CA780528A3FA2900A88AE4 /* FinalSurfEducation.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E5CA780328A3FA2900A88AE4 /* FinalSurfEducation.xcdatamodeld */; };
 		E5CA780728A3FA2B00A88AE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5CA780628A3FA2B00A88AE4 /* Assets.xcassets */; };
@@ -39,9 +44,8 @@
 
 /* Begin PBXFileReference section */
 		E50AECCF28AD1C2A007B0D35 /* NetworkTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTask.swift; sourceTree = "<group>"; };
-		E50AECD228AD1C99007B0D35 /* NetworkMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMethod.swift; sourceTree = "<group>"; };
 		E50AECD528AD446E007B0D35 /* BaseNetworkTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworkTask.swift; sourceTree = "<group>"; };
-		E50AECD828AD46EC007B0D35 /* HTTPNetworkMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPNetworkMethod.swift; sourceTree = "<group>"; };
+		E50AECD828AD46EC007B0D35 /* NetworkMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMethod.swift; sourceTree = "<group>"; };
 		E5391E5F28AA7CBE00D9DB46 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E5391E6028AA7CBE00D9DB46 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		E5391E6728AAE17300D9DB46 /* DetailImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailImageTableViewCell.swift; sourceTree = "<group>"; };
@@ -51,6 +55,12 @@
 		E5391E7228AAFABE00D9DB46 /* DetailTextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTextTableViewCell.swift; sourceTree = "<group>"; };
 		E5391E7328AAFABE00D9DB46 /* DetailTextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTextTableViewCell.xib; sourceTree = "<group>"; };
 		E53D1F7028AB047E0047E26F /* DetailItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailItemModel.swift; sourceTree = "<group>"; };
+		E5AB1B1328AED74D00E43A95 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		E5AB1B1528AED7AD00E43A95 /* AuthRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequestModel.swift; sourceTree = "<group>"; };
+		E5AB1B1728AED8F500E43A95 /* AuthResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponseModel.swift; sourceTree = "<group>"; };
+		E5AB1B1A28AEDF3400E43A95 /* PictureResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureResponseModel.swift; sourceTree = "<group>"; };
+		E5AB1B1C28AEDF5600E43A95 /* EmptyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyModel.swift; sourceTree = "<group>"; };
+		E5AB1B1E28AEE1D600E43A95 /* PicturesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesService.swift; sourceTree = "<group>"; };
 		E5CA77F728A3FA2900A88AE4 /* FinalSurfEducation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalSurfEducation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5CA77FA28A3FA2900A88AE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5CA780428A3FA2900A88AE4 /* FinalSurfEducation.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FinalSurfEducation.xcdatamodel; sourceTree = "<group>"; };
@@ -92,6 +102,8 @@
 		E50AECCD28AD1BFB007B0D35 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				E5AB1B1928AEDF0000E43A95 /* PicturesService */,
+				E5AB1B1228AED72300E43A95 /* AuthService */,
 				E50AECCE28AD1C09007B0D35 /* Core */,
 			);
 			path = Networking;
@@ -101,9 +113,9 @@
 			isa = PBXGroup;
 			children = (
 				E50AECCF28AD1C2A007B0D35 /* NetworkTask.swift */,
-				E50AECD228AD1C99007B0D35 /* NetworkMethod.swift */,
 				E50AECD528AD446E007B0D35 /* BaseNetworkTask.swift */,
-				E50AECD828AD46EC007B0D35 /* HTTPNetworkMethod.swift */,
+				E50AECD828AD46EC007B0D35 /* NetworkMethod.swift */,
+				E5AB1B1C28AEDF5600E43A95 /* EmptyModel.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -153,6 +165,25 @@
 				E5391E7328AAFABE00D9DB46 /* DetailTextTableViewCell.xib */,
 			);
 			path = TextCell;
+			sourceTree = "<group>";
+		};
+		E5AB1B1228AED72300E43A95 /* AuthService */ = {
+			isa = PBXGroup;
+			children = (
+				E5AB1B1328AED74D00E43A95 /* AuthService.swift */,
+				E5AB1B1528AED7AD00E43A95 /* AuthRequestModel.swift */,
+				E5AB1B1728AED8F500E43A95 /* AuthResponseModel.swift */,
+			);
+			path = AuthService;
+			sourceTree = "<group>";
+		};
+		E5AB1B1928AEDF0000E43A95 /* PicturesService */ = {
+			isa = PBXGroup;
+			children = (
+				E5AB1B1A28AEDF3400E43A95 /* PictureResponseModel.swift */,
+				E5AB1B1E28AEE1D600E43A95 /* PicturesService.swift */,
+			);
+			path = PicturesService;
 			sourceTree = "<group>";
 		};
 		E5CA77EE28A3FA2900A88AE4 = {
@@ -281,6 +312,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
+				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					E5CA77F628A3FA2900A88AE4 = {
 						CreatedOnToolsVersion = 12.4;
@@ -332,22 +364,27 @@
 			files = (
 				E5391E6928AAE17300D9DB46 /* DetailImageTableViewCell.swift in Sources */,
 				E50AECD028AD1C2A007B0D35 /* NetworkTask.swift in Sources */,
+				E5AB1B1B28AEDF3400E43A95 /* PictureResponseModel.swift in Sources */,
 				E5391E6F28AAECEA00D9DB46 /* DetailTitleTableViewCell.swift in Sources */,
+				E5AB1B1428AED74D00E43A95 /* AuthService.swift in Sources */,
+				E5AB1B1828AED8F500E43A95 /* AuthResponseModel.swift in Sources */,
 				E5CA783628A5395400A88AE4 /* MainModel.swift in Sources */,
+				E5AB1B1D28AEDF5600E43A95 /* EmptyModel.swift in Sources */,
+				E5AB1B1628AED7AD00E43A95 /* AuthRequestModel.swift in Sources */,
 				E5CA780528A3FA2900A88AE4 /* FinalSurfEducation.xcdatamodeld in Sources */,
 				E50AECD628AD446E007B0D35 /* BaseNetworkTask.swift in Sources */,
 				E5CA781B28A4113A00A88AE4 /* ProfileViewController.swift in Sources */,
 				E53D1F7128AB047E0047E26F /* DetailItemModel.swift in Sources */,
 				E5391E7428AAFABE00D9DB46 /* DetailTextTableViewCell.swift in Sources */,
 				E5CA77FB28A3FA2900A88AE4 /* AppDelegate.swift in Sources */,
-				E50AECD328AD1C99007B0D35 /* NetworkMethod.swift in Sources */,
 				E5CA782E28A46B1300A88AE4 /* TabBarModel.swift in Sources */,
 				E5CA783128A46DF500A88AE4 /* TabBarConfigurator.swift in Sources */,
+				E5AB1B1F28AEE1D600E43A95 /* PicturesService.swift in Sources */,
 				E5CA782628A4699B00A88AE4 /* FavoriteViewController.swift in Sources */,
 				E5391E6128AA7CBE00D9DB46 /* DetailViewController.swift in Sources */,
 				E5CA783B28A540E300A88AE4 /* MainItemCollectionViewCell.swift in Sources */,
 				E5CA781628A40CB400A88AE4 /* MainViewController.swift in Sources */,
-				E50AECD928AD46EC007B0D35 /* HTTPNetworkMethod.swift in Sources */,
+				E50AECD928AD46EC007B0D35 /* NetworkMethod.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +524,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CLL9MQ4V4C;
 				INFOPLIST_FILE = FinalSurfEducation/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -505,6 +543,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CLL9MQ4V4C;
 				INFOPLIST_FILE = FinalSurfEducation/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
