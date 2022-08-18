@@ -21,11 +21,16 @@ struct BaseNetworkTask <AbstractInput:Encodable, AbstractOutPut:Decodable> : Net
     let path: String
     let method: NetworkMethod
     let session: URLSession = URLSession (configuration: .default)
+    let isNeedInjectToken: Bool
     
+    var tokenStorage: TokenStorage {
+        BaseTokenStorage()
+    }
     
     // MARK: -Initialization
     
-    init(method: NetworkMethod, path:String) {
+    init(inNeedInjectToken:Bool, method: NetworkMethod, path:String) {
+        self.isNeedInjectToken = inNeedInjectToken
         self.path = path
         self.method = method
         
@@ -41,7 +46,7 @@ struct BaseNetworkTask <AbstractInput:Encodable, AbstractOutPut:Decodable> : Net
                     onResponseWasReceived(.failure(error))
                 } else if let data = data {
                     do {
-                       
+                        let mappedData = try JSONSerialization.jsonObject(with: data) as? [String: Any]
                         let mappedModel = try JSONDecoder().decode(AbstractOutPut.self, from: data)
                         onResponseWasReceived(.success(mappedModel))
                     } catch {
@@ -91,8 +96,13 @@ private extension BaseNetworkTask {
             request.httpBody = try getParametersForBody(from: parameters)
         }
         
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = method.method
+        
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+//        request.addValue("application/json", forHTTPHeaderField: "accept")
+        if isNeedInjectToken{
+            request.addValue("Token \(try tokenStorage.getToken().token)", forHTTPHeaderField: "Authorization")
+        }
         return request
         
     }
@@ -117,7 +127,10 @@ private extension BaseNetworkTask {
             return URLQueryItem(name: key, value: "\(value)")
         }
         
-        urlComponents.queryItems = queryItems
+        if !queryItems.isEmpty {
+            urlComponents.queryItems = queryItems
+        }
+       
         
         guard let newUrlWithQuery = urlComponents.url else {
             throw NetworkTaskError.urlWasNotFound

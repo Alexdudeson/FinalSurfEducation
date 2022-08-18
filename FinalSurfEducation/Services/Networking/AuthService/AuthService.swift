@@ -9,7 +9,9 @@ import Foundation
 
 struct AuthService {
     
-    let dataTask = BaseNetworkTask<AuthRequestModel, AuthResponseModel>(method: .post, path: "auth/login")
+    let dataTask = BaseNetworkTask<AuthRequestModel, AuthResponseModel>(
+        inNeedInjectToken: false,
+        method: .post, path: "auth/login")
     
     func performLoginRequest(
     credentials: AuthRequestModel,

@@ -25,6 +25,9 @@
 		E5AB1B1B28AEDF3400E43A95 /* PictureResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AB1B1A28AEDF3400E43A95 /* PictureResponseModel.swift */; };
 		E5AB1B1D28AEDF5600E43A95 /* EmptyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AB1B1C28AEDF5600E43A95 /* EmptyModel.swift */; };
 		E5AB1B1F28AEE1D600E43A95 /* PicturesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AB1B1E28AEE1D600E43A95 /* PicturesService.swift */; };
+		E5AB1B2228AEE34C00E43A95 /* TokenStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AB1B2128AEE34C00E43A95 /* TokenStorage.swift */; };
+		E5AB1B2428AEE39700E43A95 /* TokenContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AB1B2328AEE39700E43A95 /* TokenContainer.swift */; };
+		E5AB1B2628AEE42100E43A95 /* BaseTokenStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AB1B2528AEE42100E43A95 /* BaseTokenStorage.swift */; };
 		E5CA77FB28A3FA2900A88AE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CA77FA28A3FA2900A88AE4 /* AppDelegate.swift */; };
 		E5CA780528A3FA2900A88AE4 /* FinalSurfEducation.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E5CA780328A3FA2900A88AE4 /* FinalSurfEducation.xcdatamodeld */; };
 		E5CA780728A3FA2B00A88AE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5CA780628A3FA2B00A88AE4 /* Assets.xcassets */; };
@@ -61,6 +64,9 @@
 		E5AB1B1A28AEDF3400E43A95 /* PictureResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureResponseModel.swift; sourceTree = "<group>"; };
 		E5AB1B1C28AEDF5600E43A95 /* EmptyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyModel.swift; sourceTree = "<group>"; };
 		E5AB1B1E28AEE1D600E43A95 /* PicturesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesService.swift; sourceTree = "<group>"; };
+		E5AB1B2128AEE34C00E43A95 /* TokenStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenStorage.swift; sourceTree = "<group>"; };
+		E5AB1B2328AEE39700E43A95 /* TokenContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenContainer.swift; sourceTree = "<group>"; };
+		E5AB1B2528AEE42100E43A95 /* BaseTokenStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTokenStorage.swift; sourceTree = "<group>"; };
 		E5CA77F728A3FA2900A88AE4 /* FinalSurfEducation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalSurfEducation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5CA77FA28A3FA2900A88AE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5CA780428A3FA2900A88AE4 /* FinalSurfEducation.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FinalSurfEducation.xcdatamodel; sourceTree = "<group>"; };
@@ -94,6 +100,7 @@
 		E50AECCC28AD1BE4007B0D35 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E5AB1B2028AEE32900E43A95 /* Storage */,
 				E50AECCD28AD1BFB007B0D35 /* Networking */,
 			);
 			path = Services;
@@ -184,6 +191,16 @@
 				E5AB1B1E28AEE1D600E43A95 /* PicturesService.swift */,
 			);
 			path = PicturesService;
+			sourceTree = "<group>";
+		};
+		E5AB1B2028AEE32900E43A95 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				E5AB1B2128AEE34C00E43A95 /* TokenStorage.swift */,
+				E5AB1B2328AEE39700E43A95 /* TokenContainer.swift */,
+				E5AB1B2528AEE42100E43A95 /* BaseTokenStorage.swift */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 		E5CA77EE28A3FA2900A88AE4 = {
@@ -372,15 +389,18 @@
 				E5AB1B1D28AEDF5600E43A95 /* EmptyModel.swift in Sources */,
 				E5AB1B1628AED7AD00E43A95 /* AuthRequestModel.swift in Sources */,
 				E5CA780528A3FA2900A88AE4 /* FinalSurfEducation.xcdatamodeld in Sources */,
+				E5AB1B2628AEE42100E43A95 /* BaseTokenStorage.swift in Sources */,
 				E50AECD628AD446E007B0D35 /* BaseNetworkTask.swift in Sources */,
 				E5CA781B28A4113A00A88AE4 /* ProfileViewController.swift in Sources */,
 				E53D1F7128AB047E0047E26F /* DetailItemModel.swift in Sources */,
 				E5391E7428AAFABE00D9DB46 /* DetailTextTableViewCell.swift in Sources */,
 				E5CA77FB28A3FA2900A88AE4 /* AppDelegate.swift in Sources */,
 				E5CA782E28A46B1300A88AE4 /* TabBarModel.swift in Sources */,
+				E5AB1B2428AEE39700E43A95 /* TokenContainer.swift in Sources */,
 				E5CA783128A46DF500A88AE4 /* TabBarConfigurator.swift in Sources */,
 				E5AB1B1F28AEE1D600E43A95 /* PicturesService.swift in Sources */,
 				E5CA782628A4699B00A88AE4 /* FavoriteViewController.swift in Sources */,
+				E5AB1B2228AEE34C00E43A95 /* TokenStorage.swift in Sources */,
 				E5391E6128AA7CBE00D9DB46 /* DetailViewController.swift in Sources */,
 				E5CA783B28A540E300A88AE4 /* MainItemCollectionViewCell.swift in Sources */,
 				E5CA781628A40CB400A88AE4 /* MainViewController.swift in Sources */,
