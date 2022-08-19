@@ -47,6 +47,7 @@ struct BaseNetworkTask <AbstractInput:Encodable, AbstractOutPut:Decodable> : Net
                 } else if let data = data {
                     do {
                         let mappedData = try JSONSerialization.jsonObject(with: data) as? [String: Any]
+                        print(mappedData)
                         let mappedModel = try JSONDecoder().decode(AbstractOutPut.self, from: data)
                         onResponseWasReceived(.success(mappedModel))
                     } catch {
@@ -98,6 +99,7 @@ private extension BaseNetworkTask {
         
         request.httpMethod = method.method
         
+        request.addValue("application/json", forHTTPHeaderField: "accept")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 //        request.addValue("application/json", forHTTPHeaderField: "accept")
         if isNeedInjectToken{

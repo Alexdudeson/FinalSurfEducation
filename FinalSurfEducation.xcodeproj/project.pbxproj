@@ -19,6 +19,8 @@
 		E5391E7428AAFABE00D9DB46 /* DetailTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5391E7228AAFABE00D9DB46 /* DetailTextTableViewCell.swift */; };
 		E5391E7528AAFABE00D9DB46 /* DetailTextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5391E7328AAFABE00D9DB46 /* DetailTextTableViewCell.xib */; };
 		E53D1F7128AB047E0047E26F /* DetailItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53D1F7028AB047E0047E26F /* DetailItemModel.swift */; };
+		E593BD3928AFB9EA00B2FF91 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E593BD3828AFB9EA00B2FF91 /* ImageLoader.swift */; };
+		E593BD3B28AFBA0E00B2FF91 /* UIImageView+ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E593BD3A28AFBA0E00B2FF91 /* UIImageView+ImageLoader.swift */; };
 		E5AB1B1428AED74D00E43A95 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AB1B1328AED74D00E43A95 /* AuthService.swift */; };
 		E5AB1B1628AED7AD00E43A95 /* AuthRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AB1B1528AED7AD00E43A95 /* AuthRequestModel.swift */; };
 		E5AB1B1828AED8F500E43A95 /* AuthResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AB1B1728AED8F500E43A95 /* AuthResponseModel.swift */; };
@@ -58,6 +60,8 @@
 		E5391E7228AAFABE00D9DB46 /* DetailTextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTextTableViewCell.swift; sourceTree = "<group>"; };
 		E5391E7328AAFABE00D9DB46 /* DetailTextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTextTableViewCell.xib; sourceTree = "<group>"; };
 		E53D1F7028AB047E0047E26F /* DetailItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailItemModel.swift; sourceTree = "<group>"; };
+		E593BD3828AFB9EA00B2FF91 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		E593BD3A28AFBA0E00B2FF91 /* UIImageView+ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+ImageLoader.swift"; sourceTree = "<group>"; };
 		E5AB1B1328AED74D00E43A95 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		E5AB1B1528AED7AD00E43A95 /* AuthRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequestModel.swift; sourceTree = "<group>"; };
 		E5AB1B1728AED8F500E43A95 /* AuthResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponseModel.swift; sourceTree = "<group>"; };
@@ -109,6 +113,7 @@
 		E50AECCD28AD1BFB007B0D35 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				E593BD3728AFB9D600B2FF91 /* ImageLoader */,
 				E5AB1B1928AEDF0000E43A95 /* PicturesService */,
 				E5AB1B1228AED72300E43A95 /* AuthService */,
 				E50AECCE28AD1C09007B0D35 /* Core */,
@@ -172,6 +177,15 @@
 				E5391E7328AAFABE00D9DB46 /* DetailTextTableViewCell.xib */,
 			);
 			path = TextCell;
+			sourceTree = "<group>";
+		};
+		E593BD3728AFB9D600B2FF91 /* ImageLoader */ = {
+			isa = PBXGroup;
+			children = (
+				E593BD3828AFB9EA00B2FF91 /* ImageLoader.swift */,
+				E593BD3A28AFBA0E00B2FF91 /* UIImageView+ImageLoader.swift */,
+			);
+			path = ImageLoader;
 			sourceTree = "<group>";
 		};
 		E5AB1B1228AED72300E43A95 /* AuthService */ = {
@@ -384,6 +398,7 @@
 				E5AB1B1B28AEDF3400E43A95 /* PictureResponseModel.swift in Sources */,
 				E5391E6F28AAECEA00D9DB46 /* DetailTitleTableViewCell.swift in Sources */,
 				E5AB1B1428AED74D00E43A95 /* AuthService.swift in Sources */,
+				E593BD3928AFB9EA00B2FF91 /* ImageLoader.swift in Sources */,
 				E5AB1B1828AED8F500E43A95 /* AuthResponseModel.swift in Sources */,
 				E5CA783628A5395400A88AE4 /* MainModel.swift in Sources */,
 				E5AB1B1D28AEDF5600E43A95 /* EmptyModel.swift in Sources */,
@@ -395,6 +410,7 @@
 				E53D1F7128AB047E0047E26F /* DetailItemModel.swift in Sources */,
 				E5391E7428AAFABE00D9DB46 /* DetailTextTableViewCell.swift in Sources */,
 				E5CA77FB28A3FA2900A88AE4 /* AppDelegate.swift in Sources */,
+				E593BD3B28AFBA0E00B2FF91 /* UIImageView+ImageLoader.swift in Sources */,
 				E5CA782E28A46B1300A88AE4 /* TabBarModel.swift in Sources */,
 				E5AB1B2428AEE39700E43A95 /* TokenContainer.swift in Sources */,
 				E5CA783128A46DF500A88AE4 /* TabBarConfigurator.swift in Sources */,

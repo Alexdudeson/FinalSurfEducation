@@ -10,5 +10,18 @@ import Foundation
 struct TokenContainer {
     
     let token: String
+    let recivingDate: Date
+    
+    var tokenExpiringTime: TimeInterval {
+        39600
+    }
+    
+    var isExpired: Bool {
+        let now = Date()
+        if recivingDate.addingTimeInterval(tokenExpiringTime) > now {
+            return false } else {
+                return true
+            }
+    }
     
 }

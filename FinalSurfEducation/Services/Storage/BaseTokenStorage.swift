@@ -9,8 +9,15 @@ import Foundation
 
 struct BaseTokenStorage: TokenStorage {
     
+    // MARK: -Nested Types
+    
+    
     func getToken() throws -> TokenContainer {
-        TokenContainer(token: "d6411b00f780eeb0ebf30b1734925a4cb83aff7e6b03bddedba121ce5902933d")
+        TokenContainer(
+            token: "0641a14503410fd217160d73aa69a0e036b877f03646c1e758a7725436e5be78",
+            recivingDate: Date()
+        )
+        // 595d9f58b8ac34689b1326e2cf4ef803882995c267a00ce34c6220f4a6d8ed6a in case of
     }
     
     func set(newToken: TokenContainer) throws { }

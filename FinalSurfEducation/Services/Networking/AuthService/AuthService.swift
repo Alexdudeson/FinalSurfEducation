@@ -13,10 +13,19 @@ struct AuthService {
         inNeedInjectToken: false,
         method: .post, path: "auth/login")
     
-    func performLoginRequest(
+    func performLoginRequestAndSaveToken(
     credentials: AuthRequestModel,
     _ onResponseWasReceived: @escaping (_ result: Result<AuthResponseModel, Error>) -> Void
     ) {
-        dataTask.performRequest(input: credentials, onResponseWasReceived)
+        dataTask.performRequest(input: credentials) { result in
+            if case let .success(responseModel) = result {
+                if #available(iOS 15, *) {
+                    try? dataTask.tokenStorage.set(newToken: TokenContainer(token: responseModel.token, recivingDate: .now))
+                } else {
+                    try? dataTask.tokenStorage.set(newToken: TokenContainer(token: responseModel.token, recivingDate: Date()))
+                }
+                onResponseWasReceived(result)
+            }
+        }
     }
 }

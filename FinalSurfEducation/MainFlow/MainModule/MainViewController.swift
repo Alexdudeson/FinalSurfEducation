@@ -30,17 +30,17 @@ final class MainViewController: UIViewController {
         super.viewDidLoad()
         configureApperance()
         configureModel()
-        model.getPosts()
+        model.loadPosts()
         
         let credentials = AuthRequestModel(phone: "+79876543219", password: "qwerty")
-//        AuthService().performLoginRequest(credentials: credentials) {
-//            result in switch result {
-//            case .success(let response):
-//                print(response)
-//            case .failure(let error):
-//                print(error)
-//            }
-//        }
+        AuthService().performLoginRequestAndSaveToken(credentials: credentials) {
+            result in switch result {
+            case .success(let response):
+                print(response)
+            case .failure(let error):
+                print(error)
+            }
+        }
         PicturesService().loadPictures { result in
             print(result)
         }
@@ -83,7 +83,7 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
             let item = model.items [indexPath.row]
             cell.title = item.title
             cell.isFavorite = item.isFavorite
-            cell.image = item.image
+            cell.imageUrlInString = item.imageUrlInString
             cell.didFavoritesTapped = { [weak self] in self?.model.items [indexPath.row].isFavorite.toggle()
             }
         }
