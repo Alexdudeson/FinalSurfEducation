@@ -22,6 +22,9 @@ struct BaseNetworkTask <AbstractInput:Encodable, AbstractOutPut:Decodable> : Net
     let method: NetworkMethod
     let session: URLSession = URLSession (configuration: .default)
     let isNeedInjectToken: Bool
+    var urlCache: URLCache {
+        URLCache.shared    // MARK: -can be just .shared
+    }
     
     var tokenStorage: TokenStorage {
         BaseTokenStorage()
@@ -41,14 +44,20 @@ struct BaseNetworkTask <AbstractInput:Encodable, AbstractOutPut:Decodable> : Net
     ){
         do {
             let request = try getRequest(with: input)
-            session.dataTask(with: request) { data, response, error in
+            if let cachedResponse = getCachedResponseFromCache(by: request) {
+                let mappedModel = try JSONDecoder().decode(AbstractOutPut.self, from: cachedResponse.data)
+                onResponseWasReceived(.success(mappedModel))
+                
+                return
+            }
+            session.dataTask(with: request) {data, response, error in
                 if let error = error {
                     onResponseWasReceived(.failure(error))
                 } else if let data = data {
                     do {
-                        let mappedData = try JSONSerialization.jsonObject(with: data) as? [String: Any]
-                        print(mappedData)
+                       // let mappedData = try JSONSerialization.jsonObject(with: data) as? [String: Any]
                         let mappedModel = try JSONDecoder().decode(AbstractOutPut.self, from: data)
+                        saveResponseToCache(response, cachedData: data, by: request)
                         onResponseWasReceived(.success(mappedModel))
                     } catch {
                         onResponseWasReceived(.failure(error))
@@ -69,6 +78,26 @@ extension BaseNetworkTask where Input == EmptyModel {
     func performRequest( _ onResponseWasReceived: @escaping (_ result: Result<AbstractOutPut, Error>) -> Void) {
         performRequest(input: EmptyModel(), onResponseWasReceived)
     }
+}
+
+// MARK: -Cache logic
+
+private extension BaseNetworkTask {
+    
+    func  getCachedResponseFromCache(by request: URLRequest) -> CachedURLResponse? {
+        
+       return urlCache.cachedResponse(for: request)
+    }
+    func saveResponseToCache(_ response: URLResponse?, cachedData: Data?, by request: URLRequest) {
+        
+        guard let response = response, let cachedData = cachedData else {
+            return
+        }
+        let cachedURLResponse = CachedURLResponse(response: response, data: cachedData)
+        urlCache.storeCachedResponse(cachedURLResponse, for: request)
+        
+    }
+    
 }
 
 // MARK: -Private Methods

@@ -44,7 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     case .success:
                         self?.runMainFlow()
                     case.failure:
-            
+                        
                         // MARK: -Handler error, if token was not received
                         break
                     }
@@ -54,7 +54,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func runMainFlow(){
-        window?.rootViewController = TabBarConfigurator().configure()
+        DispatchQueue.main.async {
+            self.window?.rootViewController = TabBarConfigurator().configure()
+        }
         
     }
     

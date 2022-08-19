@@ -36,7 +36,7 @@ class MainItemCollectionViewCell: UICollectionViewCell {
     // MARK: -Animation on pressing
     override var isHighlighted: Bool {
         didSet {
-            UIView.animate(withDuration: 0.22) {
+            UIView.animate(withDuration: 0.2) {
                 self.contentView.transform = self.isHighlighted ? CGAffineTransform(scaleX: 0.98, y: 0.98) : .identity
             }
         }

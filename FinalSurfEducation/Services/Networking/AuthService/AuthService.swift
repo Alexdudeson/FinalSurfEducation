@@ -19,13 +19,13 @@ struct AuthService {
     ) {
         dataTask.performRequest(input: credentials) { result in
             if case let .success(responseModel) = result {
-                if #available(iOS 15, *) {
-                    try? dataTask.tokenStorage.set(newToken: TokenContainer(token: responseModel.token, recivingDate: .now))
-                } else {
-                    try? dataTask.tokenStorage.set(newToken: TokenContainer(token: responseModel.token, recivingDate: Date()))
-                }
+                    do {
+                            try? dataTask.tokenStorage.set(newToken: TokenContainer(token: responseModel.token, recivingDate: Date()))
+                        }  catch {
+                            print(error)
+                        }
+                    }
                 onResponseWasReceived(result)
             }
         }
     }
-}
