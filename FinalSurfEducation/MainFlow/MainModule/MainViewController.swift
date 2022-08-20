@@ -9,6 +9,7 @@ import UIKit
 
 final class MainViewController: UIViewController {
     
+    
     // MARK: -Constants
     
     private enum Constants {
@@ -44,9 +45,22 @@ final class MainViewController: UIViewController {
         PicturesService().loadPictures { result in
             print(result)
         }
+        
+        let searchButton = UIBarButtonItem (image: UIImage(named: "magnifyingglass"), style: .plain, target: self, action: #selector(searchStuff))
+        navigationItem.rightBarButtonItem = searchButton
     }
-
+    
+  
+    @objc func searchStuff() {
+        let searchController = SearchVC()
+        navigationController?.pushViewController(searchController, animated: true)
+    }
 }
+
+
+
+
+
 // MARK: -Private Methods
 
 private extension MainViewController {
@@ -71,6 +85,7 @@ private extension MainViewController {
 }
 
 
+
 // MARK: -UICollection
 
 extension MainViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -93,6 +108,7 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
         return cell
         
     }
+    
     // MARK: - Here we define heights
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -115,4 +131,5 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
 }
+
 
