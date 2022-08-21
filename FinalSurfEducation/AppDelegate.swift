@@ -60,10 +60,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
     }
     
+//    func runLaunchScreen() {
+//        let LoginAndPass = UIStoryboard(name: "LoginAndPass", bundle: .main)
+//            .instantiateInitialViewController()
+//        window?.rootViewController = LoginAndPass
+//    }
+
     func runLaunchScreen() {
         let launchScreenViewController = UIStoryboard(name: "LaunchScreen", bundle: .main)
             .instantiateInitialViewController()
         window?.rootViewController = launchScreenViewController
     }
-
 }
+

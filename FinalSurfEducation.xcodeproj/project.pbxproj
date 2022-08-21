@@ -10,6 +10,8 @@
 		E50AECD028AD1C2A007B0D35 /* NetworkTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50AECCF28AD1C2A007B0D35 /* NetworkTask.swift */; };
 		E50AECD628AD446E007B0D35 /* BaseNetworkTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50AECD528AD446E007B0D35 /* BaseNetworkTask.swift */; };
 		E50AECD928AD46EC007B0D35 /* NetworkMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50AECD828AD46EC007B0D35 /* NetworkMethod.swift */; };
+		E523CE1D28B26710004D5ECC /* LoginAndPass.xib in Resources */ = {isa = PBXBuildFile; fileRef = E523CE1C28B26710004D5ECC /* LoginAndPass.xib */; };
+		E523CE1F28B26728004D5ECC /* LoginAndPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E523CE1E28B26728004D5ECC /* LoginAndPass.swift */; };
 		E5391E6128AA7CBE00D9DB46 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5391E5F28AA7CBE00D9DB46 /* DetailViewController.swift */; };
 		E5391E6228AA7CBE00D9DB46 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5391E6028AA7CBE00D9DB46 /* DetailViewController.xib */; };
 		E5391E6928AAE17300D9DB46 /* DetailImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5391E6728AAE17300D9DB46 /* DetailImageTableViewCell.swift */; };
@@ -22,8 +24,6 @@
 		E593BD3928AFB9EA00B2FF91 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E593BD3828AFB9EA00B2FF91 /* ImageLoader.swift */; };
 		E593BD3B28AFBA0E00B2FF91 /* UIImageView+ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E593BD3A28AFBA0E00B2FF91 /* UIImageView+ImageLoader.swift */; };
 		E593BD3E28B129BD00B2FF91 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E593BD3D28B129BD00B2FF91 /* SearchViewController.swift */; };
-		E593BD4928B1836300B2FF91 /* CustomLoginAndPassword.xib in Resources */ = {isa = PBXBuildFile; fileRef = E593BD4828B1836300B2FF91 /* CustomLoginAndPassword.xib */; };
-		E593BD4B28B1844000B2FF91 /* CustomLoginAndPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = E593BD4A28B1844000B2FF91 /* CustomLoginAndPassword.swift */; };
 		E5AB1B1428AED74D00E43A95 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AB1B1328AED74D00E43A95 /* AuthService.swift */; };
 		E5AB1B1628AED7AD00E43A95 /* AuthRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AB1B1528AED7AD00E43A95 /* AuthRequestModel.swift */; };
 		E5AB1B1828AED8F500E43A95 /* AuthResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AB1B1728AED8F500E43A95 /* AuthResponseModel.swift */; };
@@ -54,6 +54,8 @@
 		E50AECCF28AD1C2A007B0D35 /* NetworkTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTask.swift; sourceTree = "<group>"; };
 		E50AECD528AD446E007B0D35 /* BaseNetworkTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworkTask.swift; sourceTree = "<group>"; };
 		E50AECD828AD46EC007B0D35 /* NetworkMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMethod.swift; sourceTree = "<group>"; };
+		E523CE1C28B26710004D5ECC /* LoginAndPass.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginAndPass.xib; sourceTree = "<group>"; };
+		E523CE1E28B26728004D5ECC /* LoginAndPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAndPass.swift; sourceTree = "<group>"; };
 		E5391E5F28AA7CBE00D9DB46 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E5391E6028AA7CBE00D9DB46 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		E5391E6728AAE17300D9DB46 /* DetailImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailImageTableViewCell.swift; sourceTree = "<group>"; };
@@ -66,8 +68,6 @@
 		E593BD3828AFB9EA00B2FF91 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		E593BD3A28AFBA0E00B2FF91 /* UIImageView+ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+ImageLoader.swift"; sourceTree = "<group>"; };
 		E593BD3D28B129BD00B2FF91 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		E593BD4828B1836300B2FF91 /* CustomLoginAndPassword.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomLoginAndPassword.xib; sourceTree = "<group>"; };
-		E593BD4A28B1844000B2FF91 /* CustomLoginAndPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoginAndPassword.swift; sourceTree = "<group>"; };
 		E5AB1B1328AED74D00E43A95 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		E5AB1B1528AED7AD00E43A95 /* AuthRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequestModel.swift; sourceTree = "<group>"; };
 		E5AB1B1728AED8F500E43A95 /* AuthResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponseModel.swift; sourceTree = "<group>"; };
@@ -206,8 +206,8 @@
 		E593BD3F28B14AF700B2FF91 /* LoginAndPassAuth */ = {
 			isa = PBXGroup;
 			children = (
-				E593BD4828B1836300B2FF91 /* CustomLoginAndPassword.xib */,
-				E593BD4A28B1844000B2FF91 /* CustomLoginAndPassword.swift */,
+				E523CE1C28B26710004D5ECC /* LoginAndPass.xib */,
+				E523CE1E28B26728004D5ECC /* LoginAndPass.swift */,
 			);
 			path = LoginAndPassAuth;
 			sourceTree = "<group>";
@@ -400,7 +400,6 @@
 			files = (
 				E5CA780A28A3FA2B00A88AE4 /* LaunchScreen.storyboard in Resources */,
 				E5CA780728A3FA2B00A88AE4 /* Assets.xcassets in Resources */,
-				E593BD4928B1836300B2FF91 /* CustomLoginAndPassword.xib in Resources */,
 				E5391E6228AA7CBE00D9DB46 /* DetailViewController.xib in Resources */,
 				E5391E7528AAFABE00D9DB46 /* DetailTextTableViewCell.xib in Resources */,
 				E5CA783C28A540E300A88AE4 /* MainItemCollectionViewCell.xib in Resources */,
@@ -409,6 +408,7 @@
 				E5CA781C28A4113A00A88AE4 /* ProfileViewController.xib in Resources */,
 				E5391E6A28AAE17300D9DB46 /* DetailImageTableViewCell.xib in Resources */,
 				E5CA781728A40CB400A88AE4 /* MainViewController.xib in Resources */,
+				E523CE1D28B26710004D5ECC /* LoginAndPass.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,12 +422,12 @@
 				E5391E6928AAE17300D9DB46 /* DetailImageTableViewCell.swift in Sources */,
 				E50AECD028AD1C2A007B0D35 /* NetworkTask.swift in Sources */,
 				E5AB1B1B28AEDF3400E43A95 /* PictureResponseModel.swift in Sources */,
-				E593BD4B28B1844000B2FF91 /* CustomLoginAndPassword.swift in Sources */,
 				E5391E6F28AAECEA00D9DB46 /* DetailTitleTableViewCell.swift in Sources */,
 				E5AB1B1428AED74D00E43A95 /* AuthService.swift in Sources */,
 				E593BD3928AFB9EA00B2FF91 /* ImageLoader.swift in Sources */,
 				E5AB1B1828AED8F500E43A95 /* AuthResponseModel.swift in Sources */,
 				E5CA783628A5395400A88AE4 /* MainModel.swift in Sources */,
+				E523CE1F28B26728004D5ECC /* LoginAndPass.swift in Sources */,
 				E5AB1B1D28AEDF5600E43A95 /* EmptyModel.swift in Sources */,
 				E5AB1B1628AED7AD00E43A95 /* AuthRequestModel.swift in Sources */,
 				E5CA780528A3FA2900A88AE4 /* FinalSurfEducation.xcdatamodeld in Sources */,
