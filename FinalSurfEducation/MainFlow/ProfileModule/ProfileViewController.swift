@@ -36,6 +36,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         view.backgroundColor = .white
         super.viewDidLoad()
+        imagePicture.image = UIImage(named: "Stranger")
         nameLabel.text = "Хммм"
         describtionLabel.text = "Как говорил мой отец: \n-10 костылей из 10"
         
